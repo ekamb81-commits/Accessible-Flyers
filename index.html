@@ -1,0 +1,929 @@
+Absolutely — here is the full HTML Reveal.js deck with the **Canva workflow**, **general flyer sharing guidance**, **Canvas Announcement workflow**, **email workflow**, and examples. It follows the uploaded flyer workflow: draft in Word first, design in Canva, export as PowerPoint, check accessibility in PowerPoint, export as a tagged PDF, and always include all flyer information as accessible text wherever it is shared. 
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Accessible Flyers: Canva, Email, Canvas, and Web Sharing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Reveal.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css">
+
+  <style>
+    :root {
+      --navy: #003366;
+      --light-gray: #f5f5f5;
+      --dark-gray: #222222;
+      --white: #ffffff;
+      --gold: #f6c343;
+    }
+
+    body {
+      background: var(--white);
+    }
+
+    .reveal {
+      color: var(--dark-gray);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3 {
+      color: var(--navy);
+      line-height: 1.15;
+    }
+
+    .reveal h1 {
+      font-size: 2.05em;
+    }
+
+    .reveal h2 {
+      font-size: 1.45em;
+      border-bottom: 4px solid var(--navy);
+      padding-bottom: 0.2em;
+    }
+
+    .reveal h3 {
+      font-size: 0.9em;
+    }
+
+    .reveal p,
+    .reveal li {
+      font-size: 0.68em;
+      line-height: 1.45;
+    }
+
+    .reveal ul,
+    .reveal ol {
+      margin-left: 1.2em;
+    }
+
+    .slide-card {
+      background: var(--light-gray);
+      border-left: 8px solid var(--navy);
+      border-radius: 18px;
+      padding: 0.9em;
+      text-align: left;
+      margin-top: 0.6em;
+    }
+
+    .white-card {
+      background: var(--white);
+      border: 2px solid var(--navy);
+      border-radius: 18px;
+      padding: 0.9em;
+      text-align: left;
+      margin-top: 0.6em;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8em;
+      align-items: start;
+    }
+
+    .three-column {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.7em;
+      align-items: stretch;
+    }
+
+    .mini-card {
+      background: var(--light-gray);
+      border-radius: 16px;
+      padding: 0.75em;
+      text-align: left;
+      border-top: 6px solid var(--navy);
+      min-height: 7em;
+    }
+
+    .mini-card h3 {
+      font-size: 0.75em;
+      margin-top: 0;
+    }
+
+    .mini-card p,
+    .mini-card li {
+      font-size: 0.52em;
+    }
+
+    .callout {
+      background: #fff8e1;
+      border-left: 8px solid var(--gold);
+      border-radius: 16px;
+      padding: 0.75em;
+      text-align: left;
+      margin-top: 0.6em;
+    }
+
+    .callout p {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .icon-row {
+      display: flex;
+      gap: 0.6em;
+      align-items: center;
+      margin-bottom: 0.4em;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      flex: 0 0 auto;
+    }
+
+    .example-box {
+      background: var(--white);
+      border: 2px dashed var(--navy);
+      border-radius: 16px;
+      padding: 0.75em;
+      text-align: left;
+    }
+
+    .sample-flyer {
+      border: 3px solid var(--navy);
+      border-radius: 14px;
+      padding: 24px;
+      background-color: var(--light-gray);
+      text-align: center;
+      margin-top: 0.6em;
+    }
+
+    .sample-flyer .flyer-title {
+      font-size: 1.1em;
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .sample-flyer .flyer-subtitle {
+      font-size: 0.75em;
+      margin: 4px 0;
+    }
+
+    .sample-flyer .flyer-details {
+      font-size: 0.6em;
+      margin: 4px 0;
+    }
+
+    .small {
+      font-size: 0.5em;
+    }
+
+    .footer-note {
+      font-size: 0.45em;
+      color: #444444;
+      margin-top: 1em;
+    }
+
+    code {
+      font-size: 0.7em;
+      background: #eeeeee;
+      padding: 0.15em 0.3em;
+      border-radius: 4px;
+    }
+
+    pre code {
+      display: block;
+      white-space: pre-wrap;
+      font-size: 0.52em;
+      line-height: 1.35;
+      max-height: 520px;
+      overflow-y: auto;
+    }
+
+    a {
+      color: var(--navy);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .two-column,
+      .three-column {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1 -->
+      <section>
+        <h1>Accessible Flyers</h1>
+        <p>Canva, Email, Canvas, and Web Sharing</p>
+
+        <div class="slide-card">
+          <div class="icon-row">
+            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+              <rect x="14" y="8" width="36" height="48" rx="4" fill="#003366"></rect>
+              <rect x="20" y="18" width="24" height="4" fill="#ffffff"></rect>
+              <rect x="20" y="28" width="24" height="4" fill="#ffffff"></rect>
+              <rect x="20" y="38" width="16" height="4" fill="#ffffff"></rect>
+            </svg>
+            <p>
+              Flyers can be visually helpful, but the same information must also be available as accessible text wherever the flyer is shared.
+            </p>
+          </div>
+        </div>
+
+        <p class="footer-note">
+          Decorative icon. No information is conveyed by the image alone.
+        </p>
+      </section>
+
+      <!-- Slide 2 -->
+      <section>
+        <h2>The Core Accessibility Question</h2>
+
+        <div class="callout">
+          <p>If someone cannot see the flyer, can they still access the information?</p>
+        </div>
+
+        <div class="slide-card">
+          <p>
+            If the answer is yes, you are on the right path. If the answer is no, the flyer or the way it is shared needs to be fixed before sending, posting, or publishing.
+          </p>
+        </div>
+
+        <div class="two-column">
+          <div class="mini-card">
+            <h3>Not Accessible</h3>
+            <ul>
+              <li>Only posting a flyer image</li>
+              <li>Writing “see attached flyer”</li>
+              <li>Using text trapped inside an image</li>
+              <li>Sending an untagged PDF</li>
+              <li>Using low contrast or crowded layouts</li>
+            </ul>
+          </div>
+
+          <div class="mini-card">
+            <h3>Accessible</h3>
+            <ul>
+              <li>Provide all details as real text</li>
+              <li>Use meaningful links</li>
+              <li>Attach an accessible PDF when needed</li>
+              <li>Use the flyer image as a visual supplement</li>
+              <li>Mark the flyer decorative when appropriate</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 3 -->
+      <section>
+        <h2>Accessible Flyer Workflow</h2>
+
+        <div class="slide-card">
+          <p>
+            This workflow applies to flyers shared by email, posted online, placed in Canvas, shared on SharePoint, or attached as a PDF.
+          </p>
+        </div>
+
+        <div class="three-column">
+          <div class="mini-card">
+            <h3>1. Draft in Word</h3>
+            <p>Type the full event information before opening Canva.</p>
+          </div>
+
+          <div class="mini-card">
+            <h3>2. Design in Canva</h3>
+            <p>Use accessible design choices and keep the layout simple.</p>
+          </div>
+
+          <div class="mini-card">
+            <h3>3. Export as PowerPoint</h3>
+            <p>Download from Canva as a Microsoft PowerPoint file, not directly as a PDF.</p>
+          </div>
+        </div>
+
+        <div class="three-column">
+          <div class="mini-card">
+            <h3>4. Check Accessibility</h3>
+            <p>Open in PowerPoint and run Review &gt; Check Accessibility.</p>
+          </div>
+
+          <div class="mini-card">
+            <h3>5. Export Tagged PDF</h3>
+            <p>Create a PDF with document structure tags for accessibility.</p>
+          </div>
+
+          <div class="mini-card">
+            <h3>6. Share Correctly</h3>
+            <p>Include all event details as accessible text where the flyer is shared.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 4 -->
+      <section>
+        <h2>Step 1: Draft the Information First</h2>
+
+        <div class="slide-card">
+          <p>
+            Before opening Canva, draft the full event information in Microsoft Word. This gives you a clean text version that can be reused in email, Canvas, SharePoint, webpages, or social media posts.
+          </p>
+        </div>
+
+        <div class="two-column">
+          <div class="mini-card">
+            <h3>Include</h3>
+            <ul>
+              <li>Event title</li>
+              <li>Date and time</li>
+              <li>Location or Zoom information</li>
+              <li>Registration link, including the full URL</li>
+              <li>Contact email</li>
+              <li>Accommodation statement</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h3>Accommodation Statement Example</h3>
+            <p>
+              This event is accessible. To request accommodations, contact
+              <strong>[email]</strong> at least 5 business days in advance.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p>Do not send or post “See attached flyer” without also including the details in text.</p>
+        </div>
+      </section>
+
+      <!-- Slide 5 -->
+      <section>
+        <h2>Step 2: Design in Canva Using Accessibility Rules</h2>
+
+        <div class="slide-card">
+          <p>
+            Canva can be used to create visually appealing flyers, but the design still needs to support readability and access.
+          </p>
+        </div>
+
+        <div class="two-column">
+          <div class="mini-card">
+            <h3>Do This</h3>
+            <ul>
+              <li>Use dark text on a light background</li>
+              <li>Use light text on a dark background when contrast is strong</li>
+              <li>Use simple, readable fonts</li>
+              <li>Keep the layout clean</li>
+              <li>Leave enough spacing between sections</li>
+            </ul>
+          </div>
+
+          <div class="mini-card">
+            <h3>Avoid This</h3>
+            <ul>
+              <li>Text over busy images</li>
+              <li>Script or decorative fonts</li>
+              <li>Low contrast color combinations</li>
+              <li>Crowded layouts</li>
+              <li>Turning text into an image</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p>The flyer may be visual, but the information should never be trapped inside the image.</p>
+        </div>
+      </section>
+
+      <!-- Slide 6 -->
+      <section>
+        <h2>Step 3: Export from Canva as PowerPoint</h2>
+
+        <div class="slide-card">
+          <p>
+            When the flyer design is finished in Canva, do not export directly to PDF. Export the flyer as a PowerPoint file first so you can check and repair accessibility before creating the final PDF.
+          </p>
+        </div>
+
+        <div class="white-card">
+          <h3>Canva Export Steps</h3>
+          <ol>
+            <li>Select <strong>Share</strong>.</li>
+            <li>Select <strong>Download</strong>.</li>
+            <li>Choose <strong>Microsoft PowerPoint (.pptx)</strong>.</li>
+            <li>Download the file.</li>
+            <li>Open the file in Microsoft PowerPoint.</li>
+          </ol>
+        </div>
+
+        <div class="callout">
+          <p>Do not export directly from Canva to PDF if the PDF needs to be accessible.</p>
+        </div>
+      </section>
+
+      <!-- Slide 7 -->
+      <section>
+        <h2>Step 4: Check Accessibility in PowerPoint</h2>
+
+        <div class="slide-card">
+          <p>
+            After opening the Canva-exported PowerPoint file, use PowerPoint’s built-in accessibility checker before creating the PDF.
+          </p>
+        </div>
+
+        <div class="two-column">
+          <div class="mini-card">
+            <h3>PowerPoint Steps</h3>
+            <ol>
+              <li>Open the file in PowerPoint.</li>
+              <li>Go to <strong>Review</strong>.</li>
+              <li>Select <strong>Check Accessibility</strong>.</li>
+              <li>Fix the issues listed.</li>
+            </ol>
+          </div>
+
+          <div class="mini-card">
+            <h3>Check For</h3>
+            <ul>
+              <li>Slide title</li>
+              <li>Logical reading order</li>
+              <li>Readable text</li>
+              <li>Sufficient contrast</li>
+              <li>Alt text for meaningful images</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p>Confirm the content reads in a logical top-to-bottom order.</p>
+        </div>
+      </section>
+
+      <!-- Slide 8 -->
+      <section>
+        <h2>Step 5: Export as an Accessible PDF</h2>
+
+        <div class="slide-card">
+          <p>
+            After fixing accessibility issues in PowerPoint, export the file as a tagged PDF. Tags help screen readers understand the structure of the document.
+          </p>
+        </div>
+
+        <div class="white-card">
+          <h3>PowerPoint PDF Export Steps</h3>
+          <ol>
+            <li>Go to <strong>File</strong>.</li>
+            <li>Select <strong>Export</strong>.</li>
+            <li>Select <strong>Create PDF/XPS</strong>.</li>
+            <li>Select <strong>Options</strong>.</li>
+            <li>Check <strong>Document structure tags for accessibility</strong>.</li>
+            <li>Export the PDF.</li>
+          </ol>
+        </div>
+
+        <div class="callout">
+          <p>Do not use “Print to PDF.” Printing to PDF can remove accessibility tags.</p>
+        </div>
+      </section>
+
+      <!-- Slide 9 -->
+      <section>
+        <h2>Step 6: Share Correctly</h2>
+
+        <div class="slide-card">
+          <p>
+            When sharing a flyer, treat the flyer as a visual supplement. The full event information should also appear as real text in the place where the flyer is posted or sent.
+          </p>
+        </div>
+
+        <div class="two-column">
+          <div class="mini-card">
+            <h3>Include as Text</h3>
+            <ul>
+              <li>Event title</li>
+              <li>Date and time</li>
+              <li>Location or Zoom information</li>
+              <li>Meaningful registration link</li>
+              <li>Contact information</li>
+              <li>Accommodation statement</li>
+            </ul>
+          </div>
+
+          <div class="mini-card">
+            <h3>Use This In</h3>
+            <ul>
+              <li>Email messages</li>
+              <li>Canvas pages</li>
+              <li>Webpages</li>
+              <li>SharePoint pages</li>
+              <li>Social media posts</li>
+              <li>Online event listings</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p>Never rely on the flyer image alone to communicate event information.</p>
+        </div>
+      </section>
+
+      <!-- Slide 10 -->
+      <section>
+        <h2>Flyers in Email</h2>
+
+        <div class="slide-card">
+          <p>
+            When sending a flyer by email, do not rely on the flyer image alone. Add all event information as accessible text in the body of the email first, then place the flyer image below as a visual reference.
+          </p>
+        </div>
+
+        <div class="white-card">
+          <h3>Recommended Email Workflow</h3>
+          <ol>
+            <li>Download the flyer as an image file, such as PNG or JPG.</li>
+            <li>Open a new email message.</li>
+            <li>Type or paste all event information as accessible text at the top of the email.</li>
+            <li>Use short paragraphs, lists, and meaningful links.</li>
+            <li>Insert the flyer image below the accessible text.</li>
+            <li>Mark the flyer image as decorative, if your email platform allows it.</li>
+            <li>Attach the accessible PDF version, if needed.</li>
+            <li>Send a test email to yourself and check it on desktop and mobile.</li>
+          </ol>
+        </div>
+
+        <div class="callout">
+          <p>Put the information in text first. Place the flyer image below. Mark the flyer as decorative when possible.</p>
+        </div>
+      </section>
+
+      <!-- Slide 11 -->
+      <section>
+        <h2>Example: Email with Flyer</h2>
+
+        <div class="slide-card">
+          <p>
+            In this example, the event information is written as accessible text first. The flyer image is placed below and marked decorative when the email platform supports it.
+          </p>
+        </div>
+
+        <div class="white-card">
+          <h3>Subject: Access in Action: Accessible Flyers Workshop</h3>
+
+          <p>Hello Cypress College,</p>
+
+          <p>
+            Professional Development invites you to join us for a practical session on creating and sharing accessible flyers.
+          </p>
+
+          <ul>
+            <li><strong>Event:</strong> Access in Action: Accessible Flyers</li>
+            <li><strong>Date:</strong> May 15</li>
+            <li><strong>Time:</strong> 10:00–11:00 a.m.</li>
+            <li><strong>Location:</strong> Zoom</li>
+            <li><strong>Contact:</strong> professionaldevelopment@cypresscollege.edu</li>
+          </ul>
+
+          <p>
+            <a href="registration-link">Register for the Accessible Flyers workshop</a>
+          </p>
+
+          <p>
+            This event is accessible. To request accommodations, contact Professional Development at least 5 business days in advance.
+          </p>
+
+          <hr>
+
+          <p><strong>Flyer image placed below as a visual reference:</strong></p>
+
+          <div class="sample-flyer" aria-hidden="true">
+            <p class="flyer-title">Access in Action</p>
+            <p class="flyer-subtitle">Accessible Flyers Workshop</p>
+            <p class="flyer-details">May 15 | 10:00–11:00 a.m. | Zoom</p>
+            <p class="flyer-details">This is a sample flyer image preview.</p>
+          </div>
+
+          <p class="small">
+            In Outlook, right-click the image, select <strong>View Alt Text</strong>, and mark the image as decorative if that option is available. If the platform does not support decorative images, use brief alt text such as “Event flyer; full details are provided above.”
+          </p>
+        </div>
+      </section>
+
+      <!-- Slide 12 -->
+      <section>
+        <h2>Email Flyer Accessibility Reminder</h2>
+
+        <div class="three-column">
+          <div class="mini-card">
+            <h3>Text Comes First</h3>
+            <p>
+              The event title, date, time, location, registration link, contact information, and accommodation statement are written in the email body.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h3>Flyer Is Supplemental</h3>
+            <p>
+              The flyer image is included only as a visual reference. It is not the only source of event information.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h3>Decorative When Possible</h3>
+            <p>
+              Mark the image decorative when the same information is already provided in accessible text above it.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p>Never send an email that only says, “See attached flyer.”</p>
+        </div>
+      </section>
+
+      <!-- Slide 13 -->
+      <section>
+        <h2>Canvas Announcements: Flyer Image + Accessible Text</h2>
+
+        <div class="slide-card">
+          <p>
+            If you post a flyer in a Canvas Announcement, the flyer should be treated as a visual supplement. The full message must be provided as accessible text above the image.
+          </p>
+        </div>
+
+        <div class="white-card">
+          <h3>Recommended Workflow</h3>
+          <ol>
+            <li>Download the flyer as an image file, such as PNG or JPG.</li>
+            <li>Open the Canvas Announcement editor.</li>
+            <li>Add the full event information at the top using real text.</li>
+            <li>Use clear headings, short paragraphs, lists, and meaningful links.</li>
+            <li>Insert the flyer image below the accessible text.</li>
+            <li>Select the flyer image and open <strong>Image Options</strong>.</li>
+            <li>Check <strong>Decorative Image</strong>.</li>
+            <li>Save or post the announcement.</li>
+          </ol>
+        </div>
+
+        <div class="callout">
+          <p>Do not make people open or read the image to get the event details.</p>
+        </div>
+      </section>
+
+      <!-- Slide 14 -->
+      <section>
+        <h2>Example: Canvas Announcement with Flyer</h2>
+
+        <div class="slide-card">
+          <p>
+            In this example, the event information is written as accessible text first. The flyer image is placed at the bottom and marked decorative.
+          </p>
+        </div>
+
+        <div class="white-card">
+          <h3>Access in Action: Accessible Flyers</h3>
+
+          <p>
+            Join Professional Development for a practical session on creating and sharing accessible flyers.
+          </p>
+
+          <ul>
+            <li><strong>Date:</strong> May 15</li>
+            <li><strong>Time:</strong> 10:00–11:00 a.m.</li>
+            <li><strong>Location:</strong> Zoom</li>
+            <li><strong>Audience:</strong> Faculty, classified professionals, and management</li>
+            <li><strong>Contact:</strong> professionaldevelopment@cypresscollege.edu</li>
+          </ul>
+
+          <p>
+            <a href="registration-link">Register for the Accessible Flyers workshop</a>
+          </p>
+
+          <p>
+            This event is accessible. To request accommodations, contact Professional Development at least 5 business days in advance.
+          </p>
+
+          <hr>
+
+          <p><strong>Flyer image placed below as a visual reference:</strong></p>
+
+          <div class="sample-flyer" aria-hidden="true">
+            <p class="flyer-title">Access in Action</p>
+            <p class="flyer-subtitle">Accessible Flyers Workshop</p>
+            <p class="flyer-details">May 15 | 10:00–11:00 a.m. | Zoom</p>
+            <p class="flyer-details">This is a sample flyer image preview.</p>
+          </div>
+
+          <p class="small">
+            In Canvas, select the flyer image, open <strong>Image Options</strong>, and check <strong>Decorative Image</strong> because the full event information already appears above.
+          </p>
+        </div>
+      </section>
+
+      <!-- Slide 15 -->
+      <section>
+        <h2>What Makes This Accessible?</h2>
+
+        <div class="three-column">
+          <div class="mini-card">
+            <h3>Text Comes First</h3>
+            <p>
+              The event title, date, time, location, registration link, contact information, and accommodation statement are provided as real text.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h3>Flyer Is Supplemental</h3>
+            <p>
+              The flyer image is included only as a visual reference. It is not the only source of information.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h3>Image Is Decorative</h3>
+            <p>
+              The flyer image is marked decorative because the same information is already available in accessible text above it.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p>Best practice: accessible text above, flyer image below, decorative image selected.</p>
+        </div>
+      </section>
+
+      <!-- Slide 16 -->
+      <section>
+        <h2>Alt Text Decision Guide</h2>
+
+        <div class="three-column">
+          <div class="mini-card">
+            <h3>Decorative</h3>
+            <p>
+              If the flyer is fully repeated in nearby text, mark it decorative.
+            </p>
+            <p><strong>Action:</strong> Select Decorative Image when available.</p>
+          </div>
+
+          <div class="mini-card">
+            <h3>Informational</h3>
+            <p>
+              If the image adds meaning, write short alt text that explains its purpose.
+            </p>
+            <p><strong>Example:</strong> “Flyer for the May 15 Accessible Flyers workshop.”</p>
+          </div>
+
+          <div class="mini-card">
+            <h3>Complex</h3>
+            <p>
+              If the image includes detailed information, provide the details as nearby text.
+            </p>
+            <p><strong>Best practice:</strong> Do not put long event details only in alt text.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p>Alt text is not the best place for long event descriptions. Use real text instead.</p>
+        </div>
+      </section>
+
+      <!-- Slide 17 -->
+      <section>
+        <h2>Canvas HTML Example</h2>
+
+        <div class="slide-card">
+          <p>
+            This pattern gives students and employees the event details in accessible text while still allowing the flyer to appear visually on the page or announcement.
+          </p>
+
+<pre><code>&lt;h2&gt;Access in Action: Accessible Flyers&lt;/h2&gt;
+
+&lt;p&gt;
+  Join Professional Development for a practical session on creating
+  and sharing accessible flyers.
+&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Date:&lt;/strong&gt; May 15&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; 10:00–11:00 a.m.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Location:&lt;/strong&gt; Zoom&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Contact:&lt;/strong&gt; professionaldevelopment@cypresscollege.edu&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+  &lt;a href="registration-link"&gt;Register for the Accessible Flyers session&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  This event is accessible. To request accommodations, contact
+  Professional Development at least 5 business days in advance.
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;a href="accessible-flyer.pdf"&gt;Download the accessible PDF flyer&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;img src="flyer-image.jpg" alt="" role="presentation"&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- Slide 18 -->
+      <section>
+        <h2>Quick Accessibility Checklist</h2>
+
+        <div class="slide-card">
+          <ul>
+            <li>The flyer information is available as real text wherever the flyer is shared.</li>
+            <li>The flyer uses readable fonts and strong color contrast.</li>
+            <li>The flyer does not place important text over a busy image.</li>
+            <li>The PowerPoint file has been checked with the Accessibility Checker.</li>
+            <li>The PDF is exported with document structure tags for accessibility.</li>
+            <li>The email, Canvas page, or webpage uses meaningful links.</li>
+            <li>The flyer image is marked decorative when the same information appears nearby as text.</li>
+            <li>The message works on desktop and mobile.</li>
+          </ul>
+        </div>
+
+        <div class="callout">
+          <p>Accessible sharing means the message is not trapped inside the image.</p>
+        </div>
+      </section>
+
+      <!-- Slide 19 -->
+      <section>
+        <h2>Why This Matters</h2>
+
+        <div class="two-column">
+          <div class="mini-card">
+            <h3>Perceivable</h3>
+            <p>
+              The information is available as text, not only as an image.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h3>Operable</h3>
+            <p>
+              Links and page content can be reached by keyboard and assistive technology.
+            </p>
+          </div>
+        </div>
+
+        <div class="two-column">
+          <div class="mini-card">
+            <h3>Understandable</h3>
+            <p>
+              Event details are organized clearly with headings, lists, and plain language.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h3>Robust</h3>
+            <p>
+              Real text is more reliable across browsers, devices, screen readers, magnification tools, and mobile settings.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 20 -->
+      <section>
+        <h2>Final Reminder</h2>
+
+        <div class="callout">
+          <p>If someone cannot see the flyer, can they still access the information?</p>
+        </div>
+
+        <div class="slide-card">
+          <p>
+            The accessible workflow is not just about making the flyer file better. It is about making sure the event information is available wherever the flyer is shared.
+          </p>
+
+          <p>
+            The flyer can be visual, but the information must also be available as accessible text in the email, webpage, Canvas page, social media post, or other location where it is shared.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      controls: true,
+      progress: true,
+      center: true
+    });
+  </script>
+</body>
+</html>
+```
